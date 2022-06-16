@@ -1,0 +1,39 @@
+.statistics {
+    margin-top: 350px;
+    &-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 230px;
+        
+    }
+    &-number {
+        font-size: 56px;
+        font-weight: 600;
+        line-height: 90px;
+        padding: 0 58px;
+       
+        
+    }
+    &-text {
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: 400;
+        text-align: center;
+        
+    }
+}
+@media (max-width: 1000px) {
+    .statistics {
+        margin-top: 150px;
+        &-main {
+            flex-wrap: wrap;
+        }
+    }
+}

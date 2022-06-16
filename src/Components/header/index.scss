@@ -1,0 +1,90 @@
+
+.header {
+    box-sizing: border-box;
+    padding: 0 209px;
+    background-color: #fff;
+    font-size: 0;
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-logo {
+        box-sizing: border-box;
+        padding: 36px 0;
+        & img {
+            display: block;
+        }
+        & img.overone {
+            display: none;
+        }
+    }
+    &-menu {
+        box-sizing: border-box;
+        padding: 28px 0;
+        & img {
+            cursor: pointer;
+        }
+    }
+}
+.btn-up {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 2px solid #1E212B;
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    opacity: 0.5;
+    z-index: 10000;
+    & a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        transition: 1.2s;
+    }
+    & a img {
+        position: absolute;
+        left: 33.33%;
+        top: 33.33%;
+    }
+}
+@media (max-width: 1440px) {
+    .header {
+        padding: 0 150px;
+    }
+}
+@media (max-width: 1200px) {
+    .header {
+        padding: 0 100px;
+    }
+  
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 0 50px;
+    }
+  
+}
+@media (max-width: 400px) {
+    .header {
+        padding: 0 16px;
+        &-logo {
+            & img {
+                display: none;
+            }
+            & img.overone {
+                display: block;
+            }
+        }
+    }
+    
+}
+@media (max-width: 700px) {
+.btn-up {
+    display: none;
+}
+}

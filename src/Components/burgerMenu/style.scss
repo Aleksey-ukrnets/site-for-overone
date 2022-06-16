@@ -1,0 +1,97 @@
+.menu {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.205);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: right;
+    pointer-events: none;
+    margin-right: -100%;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 100000;
+    &.active-menu {
+        pointer-events: all;
+        opacity: 1;
+        display: flex;
+        margin-right: 0;
+        background: rgba(255, 255, 255, 0.5); // Make sure this color has an opacity of less than 1
+        backdrop-filter: blur(8px); // This be the blur
+    }
+    &-main {
+        padding: 28px 236px 0 40px;
+        width: 30%;
+        background-color: white;
+        transition: 0.4s all;
+        pointer-events: all;
+        
+    }
+    &-close {
+        position: relative;
+        & img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        }
+    }
+    &-nav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;
+        border-bottom: 1px solid #EDEDED;
+        & li {
+            font-family: Avenir Next Cyr;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            text-decoration: none;
+            & a {
+                cursor: pointer;
+                color: black;
+                text-decoration: none;
+                &:hover {
+                    color: blue;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    &-social {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+        &-icon {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+@media (max-width: 768px) {
+  .menu {
+      &-main {
+        padding: 28px 136px 0 40px;
+      }
+  }
+}
+@media (max-width: 550px) {
+    .menu {
+        &-main {
+          padding: 50px ;
+          width: 100%;
+        }
+    }
+  }
+  @media (max-width: 425px) {
+    .menu {
+        &-main {
+          padding: 50px;
+          width: 100%;
+        }
+    }
+  }

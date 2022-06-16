@@ -1,0 +1,123 @@
+.services {
+    margin-top: 100px;
+    &-main {
+        padding: 0 209px;
+        & h1 {
+        font-family: Avenir Next Cyr;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 90px;
+        letter-spacing: 0em;
+        text-align: center;
+        }
+    }
+    &-line {
+        width: 48px;
+        height: 4px;
+        background: #0812F8;
+        border-radius: 2px; 
+        margin-top: 24px;
+        margin: 0 auto;
+    }
+    &-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 52px;
+        width: 100%;
+        height: auto;
+    }
+    &-flex {
+        display: flex;
+        width: 100%;
+        &-first {
+            margin: 0;
+        }
+        &-second {
+            margin-top: 32px;
+        }
+    }
+    &-info {
+        width: 100%;
+        border: 1px solid #EDEDED;
+        background: #FFFFFF;
+        border-radius: 2px;
+        text-align: center;
+        &:nth-child(2n) {
+            margin-left: 32px;
+        }
+        &-padding {
+            padding: 40px 37px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-title {
+            font-family: Avenir Next Cyr;
+            margin: 10px 0 0 0;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 40px;
+            text-align: center;
+        }
+        &-message {
+            font-family: Avenir Next Cyr;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 400;
+            margin: 24px 0 0 0;
+        }
+    }
+    
+}
+@media (max-width: 1440px) {
+    .services {
+        &-main {
+            padding: 0 150px;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .services {
+        &-main {
+            padding: 0 100px;
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .services {
+        &-flex {
+            flex-direction: column;
+        }
+        &-info {
+            width: 100%;
+            margin: 32px 0 0 0;
+            &:nth-child(2n) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .services {
+        &-main {
+            padding: 0 50px;
+            & h1 {
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 60px;
+                letter-spacing: 0em;
+    
+                }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .services {
+        &-main {
+            padding: 0 16px;
+           
+        }
+    }
+}

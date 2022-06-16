@@ -1,0 +1,57 @@
+.cooperation {
+    margin-top: 100px;
+        &-main {
+            padding: 0 209px;
+        }
+        &-company {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: wrap;
+            & img {
+                padding: 15px;
+            }
+        }
+}
+
+
+@media (max-width: 1440px) {
+    .cooperation {
+        &-main {
+            padding: 0 150px;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .cooperation {
+        &-main {
+            padding: 0px;
+        }
+        &-company {
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            justify-content:normal;
+            align-items: normal;
+            position: relative;
+            &_photo {
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: auto;
+                margin-left: 40px;
+                &:nth-child(1){
+                    margin: 0;
+                }
+                
+                & img {
+                    object-fit: contain;
+                    
+                   
+                }
+            }
+        }
+    }
+}

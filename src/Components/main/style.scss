@@ -1,0 +1,185 @@
+.banner {
+
+    &-main {  
+    position: relative;
+    height: auto;
+    min-height: 800px;
+    box-sizing: border-box;
+    padding: 0 100px 0 209px;
+    }
+    &-column {
+        width: 100%;
+        position: relative;
+        display: flex;
+        &-right {
+            width: 48%;
+            position: relative;
+            
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                max-width: 760px;
+                padding: 130px 0 0;
+                object-fit: cover;
+            }
+        }
+    }
+    &-message {
+        box-sizing: border-box;
+        max-width: 872px;
+        width: 48%;
+        padding: 130px 0 0;
+        &-description {
+            color: #1E212B;
+            font-size: 24px;
+            font-family: Avenir Next Cyr;
+            line-height: 40px;
+            letter-spacing: -0.01em;
+        }
+        & h1 {
+            font-family: Avenir Next Cyr;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 70px;
+            line-height: 90px;
+            color: #1E212B;
+            letter-spacing: 0.01em;
+        }
+        &-action {
+            display: flex;
+            margin-top: 24px;
+        }
+    }
+    
+}
+.button {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    font-family: Open Sans,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: none;
+    -webkit-appearance: none;
+    
+}
+.button-size-standart {
+    padding: 18px 32px;
+    font-size: 18px;
+}
+.button-theme-blue {
+    background: #0000FF;
+    color: white;
+    border: 1px solid transparent;
+}
+.button-theme-white {
+    border: 1px solid black;
+    margin-left: 23px;
+}
+@media (max-width: 1440px) {
+    .banner {
+        &-main {
+        padding: 0 150px;
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .banner-main {
+        padding: 0 100px;
+        background-image: url('../../assets/image/Background.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover ;
+        margin-top: 100px;
+    }
+    .banner-column-right {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .banner-column-right img {
+        position: static;
+        display: none;
+    }
+    .banner-column {
+        flex-direction: column;
+    }
+    .banner-message {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+    }
+}
+@media (max-width: 768px) {
+    .banner {
+            &-message {
+                padding: 0;
+                &-action {
+                    justify-content: center;
+                    
+                }
+                & h1 {
+                    font-family: Avenir Next Cyr;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 60px;
+                    letter-spacing: 0.01em;
+                    text-align: center;
+
+                }
+                &-description {
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                    text-align: center;
+                }
+               
+            }
+        
+            &-column-right img {
+                display: none;
+            }
+    }
+    
+}
+@media (max-width: 750px) {
+    .banner {
+
+    &-message{       
+        &-action {
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+    .button-theme-white {
+        margin: 24px 0 0 0;
+    }
+}
+}
+@media (max-width: 430px) {
+    .banner {
+        &-main {
+            padding: 0 16px;
+        }
+    &-message{       
+        &-action {
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+    .button-theme-white {
+        margin: 24px 0 0 0;
+    }
+}
+}

@@ -1,0 +1,286 @@
+.recall {
+    background: #F2F6FF;
+    width: 100%;
+    margin-top: 180px;
+    height: 468px;
+    overflow: hidden;
+    &-main {
+        padding: 0 209px;
+    }
+    &-columns {
+        width: 100%;
+        padding: 24px 0;
+        display: flex;
+    }
+    &-left {
+        width: 30%;
+        & h3 {
+        font-family: Avenir Next Cyr;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 49px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+        & p {
+        font-family: Avenir Next Cyr;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 24px;
+        }
+    }
+    &-right {
+        width: 70%;
+        display: flex;
+        overflow: hidden;
+        &_first, &_second {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-left: 32px;                   
+        }
+        &_first {
+            transition: 5s ease;
+            animation: Scroll-top 10s infinite;
+        }
+        &_second {
+            transition: 5s ease;
+            margin-top: -235px;
+            animation: Scroll-bottom 10s infinite;
+        }
+        
+        
+        
+    }
+   
+}
+.recall-card {
+    width: 100%;
+    max-height: 192px;
+    min-height: 192px;
+    margin-top: 40px;
+    max-width: 481px;
+    height: 100%;
+    &:nth-child(1){
+        margin: 0;
+    }
+    &-main {
+        background: #FFFFFF;
+        padding: 24px 15px 24px 30px;
+        height: 100%;
+        border-radius: 8px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & p {
+            font-family: Avenir Next Cyr;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+       
+    }
+    &-about {
+        margin-top: 5px;
+        display: flex;
+        width: 100%;
+    }
+    &_photo {
+     
+        & img {
+            object-fit: contain;
+            width: 47px;
+            height: 47px;
+            border-radius: 50%;
+        }
+    }
+    &_human {
+        margin-left: 12px;
+        & h6 {
+        font-family: Avenir Next Cyr;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+        & span {
+        font-family: Avenir Next Cyr;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        }
+    }
+    
+}
+// .recall-card-color {
+//     background: white;
+// }
+.recall-card:nth-child(2) > .recall-card-main {
+    background: #E2E9FA;
+  
+}
+@media (max-width: 1440px) {
+    .recall {
+        &-main {
+            padding: 0 150px;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .recall {
+        height: 650px;
+        &-main {
+            padding: 0 100px;
+        }
+        &-columns {
+            flex-direction: column;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            margin-top: 50px;
+        }
+        &-right_first {
+            width: 100%;
+        }
+        &-card {
+            &-about {
+                margin-top: 15px;
+            }
+        }
+        
+        
+     
+    }
+   
+}
+@media (max-width: 768px) {
+.recall {
+    height: 700px;
+    &-main {
+        padding: 0 50px;
+    }
+    &-right {
+        display: flex;
+        flex-direction: column;
+        &_first, &_second {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            animation: none;
+            margin-left: 0 ;
+        }
+        &_first {
+            animation: Scroll-left_mobile 30s infinite;
+        }
+        &_second {
+           margin-top: 32px;
+           margin-left: -810px;
+           animation: Scroll-right_mobile 30s infinite;
+        }
+       
+    }
+    &-card {
+        margin-top: 0;
+        // margin-left: 40px;
+        min-width: 450px;
+        &:nth-child(2){
+            margin-left: 40px;
+        }
+        &:nth-child(3){
+            margin-left: 80px;
+        }
+    }
+}
+}
+@media (max-width: 550px) {
+    .recall {
+        height: auto;
+        &-card {
+            width: 75vw;
+            max-height: none; 
+            min-width: 1px;
+            &:nth-child(3){
+                margin-left: 40px;
+            }
+        }
+        &-right {
+            &_first {
+                animation: none;
+                overflow-x: scroll;
+            }
+            &_second {
+                animation: none;
+                margin-left: 0;
+                overflow-x: scroll;
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .recall {
+        &-left {
+            & h3, & p {
+                text-align: center;
+            }
+        }
+        &-main {
+            padding: 0 16px;
+        }
+        &-card {
+            width: 90vw;
+        }
+    }
+    
+}
+//animation max-width: 1200px +
+@keyframes Scroll-top {
+    50% {
+        margin-top: -235px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+@keyframes Scroll-bottom {
+    50% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: -235px;
+    }
+}
+
+//animation max-width: 1200px -
+
+@keyframes Scroll-left_mobile{
+    50% {
+        margin-left: -810px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+@keyframes Scroll-right_mobile{
+    50% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -810px;
+    }
+}

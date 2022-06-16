@@ -1,0 +1,112 @@
+.develop {
+    margin: 100px 0 0 0;
+    &-main {
+        padding: 0 209px;
+        & h1 {
+            
+            font-size: 56px;
+            line-height: 90px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    &-column {
+        display: flex;
+        width: 100%;
+        position: relative;
+        justify-content: space-between;
+        &_left {
+            height: auto;
+            max-width: 608px;
+            width: 48%;
+            position: relative;
+          
+            & .line {
+                width: 48px;
+                height: 4px;
+                background: #0812F8;
+                border-radius: 4px;
+                margin-top: 32px;
+            }
+        }
+        &_right {
+            margin-top: 226px;
+            width: 48%;
+            position: relative;
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;;
+               
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1400px) {
+    .develop {
+        &-main {
+            padding: 0 150px;
+        }
+    }
+    }
+    // .develop-column_right {
+    //     object-fit: cover;
+    //     width: 50%;
+    //     height: 100%;
+    // }
+@media (max-width: 1200px) {
+.develop {
+    &-main {
+        padding: 0 100px;
+    }
+}
+
+}
+
+@media (max-width: 1100px) {
+    // .develop-column_right {
+    //    display: none;
+    // }
+    .develop-column_left {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+    }
+    }
+
+
+@media (max-width: 1024px){
+    .develop-column_right {
+        display: none;
+     }
+    }
+@media (max-width: 768px){
+.develop-main {
+    padding: 0 50px;
+
+& h1 {
+    font-family: Avenir Next Cyr;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 60px;
+letter-spacing: 0em;
+text-align: center;
+
+        }
+    }
+}
+@media (max-width: 425px) {
+    .develop{
+        &-main {
+            padding: 0 16px;
+        }
+        
+    }
+}

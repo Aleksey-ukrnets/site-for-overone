@@ -1,0 +1,235 @@
+.command {
+    margin: 100px 0 0 0;
+    overflow: hidden;
+    &-main {
+        padding: 0 209px;
+        
+            & h1 {
+            font-family: Avenir Next Cyr;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 90px;
+            letter-spacing: 0em;
+            text-align: center;
+            }
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-gap: 60px;
+        margin-top: 50px;
+    }
+    &-person {
+        position: relative;
+        cursor: pointer;
+        height: 23rem;
+        width: 100%;
+        
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+        &_name {          
+            z-index: 1000;
+            font-family: Avenir Next Cyr;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 450;
+            line-height: 40px;
+            letter-spacing: -0.01em;
+            text-align: center;
+            margin-top: 12px;
+        }
+    }
+    &-profile {
+        width: 750px;
+        height: 376px;
+        position: absolute;
+        background-color: #FFFFFF;
+        top: 0;
+        transition: 0.5s;
+        animation: slide-right 1s ;
+        z-index: 1000;
+        overflow: hidden;
+        &-name {      
+            font-family: Avenir Next Cyr;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            margin: 12px 0 0 0;
+        }
+        &-position {
+            font-family: Avenir Next Cyr;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            color: #0812F8;
+        }
+        &-about {
+            color: #00114B;
+            font-family: Avenir Next Cyr;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 16px 0;
+        }
+        &-social {
+            display: flex;
+            &_icon{
+                margin-left: 24px;
+                &:nth-child(1){
+                    margin: 0;
+                }
+            }
+        }
+        &-main {
+            width: 70%;
+            padding: 48px 116px 79px 50px;
+            background-color: #FFFFFF;
+            transition: 0.4s all;
+            pointer-events: all;
+        }
+        
+
+    }
+    &-line {
+        width: 48px;
+        height: 4px;
+        background: #0812F8;
+        border-radius: 4px; 
+    }
+}
+@keyframes slide-right {
+    from {
+       margin-left: -1000px;
+    }
+
+    to {
+       margin-left: 0%;
+       
+    }
+ }
+ @media (max-width: 1440px) {
+    .command {
+        &-main {
+        padding: 0 150px;
+        }
+        &-profile {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            &-main {
+                padding: 0px 116px 0 50px;
+            }
+        }
+        &-list {
+            grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+            grid-gap: 40px;
+        }
+    }
+}
+.command-person:nth-child(1) img {
+    margin-top: 0.35%;
+   } 
+   .command-person:nth-child(3) img {
+    margin-top: 0.2%;
+} 
+@media (max-width: 1520px) {
+    .command {
+        &-person:nth-child(1) img {
+         margin-top: -1.2px;
+        } 
+        &-person:nth-child(2) img {
+            margin-top: -0.35%;
+        } 
+        &-person:nth-child(3) img {
+            margin-top: -1.2px;
+        } 
+        &-person:nth-child(5) img {
+            margin-top: -0.3%;
+        } 
+        &-person_name:nth-child(1){
+            left: 25%;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .command {
+        &-main {
+        padding: 0 100px;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .command {
+        &-person:nth-child(1) img {
+         margin-top: -1.2px;
+        } 
+        &-person:nth-child(3) img {
+            margin-top: -1px;
+           } 
+    }
+}
+@media (max-width: 768px) {
+    .command {
+        &-list {
+            grid-gap: 30px;
+        }
+        &-profile {
+            width: 616px;
+            height: 368px;
+            overflow: hidden;  
+        }
+        &-main {
+        padding: 0 50px;
+      
+        & h1 {
+            font-family: Avenir Next Cyr;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 60px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+        }
+    }
+}
+@media (max-width: 550px) {
+    .command {
+        &-main {
+        padding: 0 16px;
+        }
+        & h1 {
+            font-size: 32px;
+        }
+        &-profile {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            &-main {
+                padding: 40px 30px 50px 16px ;
+            }
+        }
+    }
+}
+//.command-person:nth-child(1) img {
+//    margin-top: 0.1%;
+// } 
+//
+//
